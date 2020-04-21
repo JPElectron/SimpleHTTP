@@ -27,7 +27,7 @@ This program runs as a service; without any GUI, taskbar, or system tray icon.
 4) Edit SimpleHTTP.ini to include the IP of your server and path to the default.x files (usually C:\SimpleHTTP\wwwroot)
 5) Right-click on _setup_.bat and select "Run as administrator" to install the service (see note at bottom of this text)
 
-View the default .ini file that's included. Anytime you make a change in SimpleHTTP.ini you must restart the service for it to take effect.
+Anytime you make a change in SimpleHTTP.ini you must restart the service for it to take effect.
 
 <b>Usage:</b>
 
