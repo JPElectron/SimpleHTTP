@@ -1,6 +1,8 @@
 # SimpleHTTP
 Serves a default.htm .gif .jpg .swf or .js file from it's \wwwroot directory.
+
 Included are a blank page, transparent 1x1 pixel gif, white 1x1 pixel jpg, and 1x1 pixel flash file.
+
 You can modify these to be whatever you like, as long as the filename remains default.x
 
 Speeds up surfing by answering the request for blocked content.
@@ -32,10 +34,11 @@ Anytime you make a change in SimpleHTTP.ini you must restart the service for it 
 <b>Usage:</b>
 
 SimpleHTTP will also serve the following files when requested and found in the path...
-/default001.htm through /default005.htm
-/default001.gif through /default005.gif
-/default001.jpg through /default005.jpg
-/default001.swf through /default005.swf
+
+- /default001.htm through /default005.htm
+- /default001.gif through /default005.gif
+- /default001.jpg through /default005.jpg
+- /default001.swf through /default005.swf
 
 No GUI is displayed, check Task Manager or tcpview to see that it's running.
 
