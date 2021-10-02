@@ -47,6 +47,10 @@ Note: Under Windows Vista and later OS versions you may receive an error (HRESUL
 The solution is to save the .zip file, right-click on it, select properties, and click the Unblock button.
 Then extract the contents of the .zip file. Right-click on _setup_.bat and select "Run as administrator" and it will work.
 
+## Unintended usage to stop browser hang
+
+Since the new norm of all sites having to be HTTPS, Firefox and other browsers will hang or pause while they attempt to reach your site via HTTPS before actually loading the page via HTTP.  This is extreamly annoying for an internal-only HTTP-only site hosted within your LAN.  You can speed up page loading by running an instance of SimpleHTTP with Port=443  Note that SimpleHTTP DOES NOT actually support HTTPS, but because the response on port 443 will be "unexpected" the browser will give-up more quickly and revert to loading your site via HTTP the way you intend.  This is also useful with various Internet filtering methods where a blocked site's DNS will resolve to that of a non-HTTPS site normally hosting the "Blocked by content filter" message.  For example if BlockedIP=192.168.4.4 in dnsredir.ini then use IP=192.168.4.4 and Port=443 in simplehttp.ini  The normal "Blocked by content filter" message will not appear in the browser but rather a "Secure Connection Failed" (or similar message) will - which should be an indication to end-users that the website is blocked - all without having to forge SSL certs or mistrain users that accepting a self-signed certificate is an acceptable thing to do.
+
 ## License
 
 GPL does not allow you to link GPL-licensed components with other proprietary software (unless you publish as GPL too).
